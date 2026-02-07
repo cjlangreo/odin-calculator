@@ -1,0 +1,94 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+:root {
+  --primary: #ecf0f3;
+  --dark-accent: #E93820;
+  --light-accent: #F8BDB5;
+  --accent: #F07162;
+  --text: #3F5364;
+  --dark: #d1d9e6;
+  --light: #fff;
+
+  --large-dark-shadow-offset: 18px;
+  --large-light-shadow-offset: -18px;
+  --large-blur: 30px;
+
+  --small-dark-shadow-offset: 3px;
+  --small-light-shadow-offset: -3px;
+  --small-blur: 5px;
+
+  --rounding: 20px
+
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: var(--primary);
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  width: 500px;
+  border-radius   : var(--rounding);
+  box-shadow:
+    var(--dark) var(--large-dark-shadow-offset) var(--large-dark-shadow-offset) var(--large-blur),
+    var(--light) var(--large-light-shadow-offset) var(--large-light-shadow-offset) var(--large-blur);
+
+  padding: 1.5rem;
+}
+
+#button-container{
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+#screen {
+  height: 100px;
+  text-align: end;
+
+  font-size: 2rem;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  border-radius: var(--rounding);
+  box-shadow: inset var(--dark) var(--large-dark-shadow-offset) var(--large-dark-shadow-offset) var(--large-blur), inset var(--light) var(--large-light-shadow-offset) var(--large-light-shadow-offset) var(--large-blur);
+}
+
+button {
+  border: none;
+  padding: 1rem;
+
+  user-select: none;
+  
+  background-color: var(--primary);
+  border-radius: var(--rounding);
+  box-shadow: var(--dark) var(--small-dark-shadow-offset) var(--small-dark-shadow-offset) var(--small-blur), var(--light) var(--small-light-shadow-offset) var(--small-light-shadow-offset) var(--small-blur);
+
+  cursor: pointer;
+}
+
+button:active{
+  box-shadow: inset var(--dark) var(--small-dark-shadow-offset) var(--small-dark-shadow-offset) var(--small-blur), inset var(--light) var(--small-light-shadow-offset) var(--small-light-shadow-offset) var(--small-blur);
+}
+
+#clear, #back {
+  grid-column: span 2;
+}
+
+
+#back svg {
+  height: 1.5rem;
+}
