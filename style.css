@@ -65,6 +65,8 @@ body {
   
   border-radius: var(--rounding);
   box-shadow: inset var(--dark) var(--large-dark-shadow-offset) var(--large-dark-shadow-offset) var(--large-blur), inset var(--light) var(--large-light-shadow-offset) var(--large-light-shadow-offset) var(--large-blur);
+
+  overflow-x: auto;
 }
 
 button {
@@ -84,11 +86,11 @@ button:active{
   box-shadow: inset var(--dark) var(--small-dark-shadow-offset) var(--small-dark-shadow-offset) var(--small-blur), inset var(--light) var(--small-light-shadow-offset) var(--small-light-shadow-offset) var(--small-blur);
 }
 
-#clear, #back {
+.Escape, .Backspace {
   grid-column: span 2;
 }
 
 
-#back svg {
+.Backspace svg {
   height: 1.5rem;
 }
