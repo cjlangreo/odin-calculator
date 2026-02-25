@@ -36,8 +36,10 @@ function updateOutput(){
 
 function addNumber(newNumber){
   if(expression.operation){
+    if(newNumber === "." && expression.operand2.includes(".")) return
     expression.operand2 += newNumber
   } else {
+    if(newNumber === "." && expression.operand1.includes(".")) return
     if(expression.operand1 === "0") expression.operand1 = newNumber 
     else expression.operand1 += newNumber
   }
