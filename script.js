@@ -47,6 +47,12 @@ function addNumber(newNumber){
 }
 
 function setOperation(operation){
+  if(expression.operand2){
+    operate()
+    setOperation(operation)
+    return
+  }
+  
   if(!+expression.operand1 && operation !== "-") return
   else if(!+expression.operand1 && operation === "-") expression.operand1
   
